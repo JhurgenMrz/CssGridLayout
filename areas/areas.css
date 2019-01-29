@@ -9,13 +9,18 @@ body{
     /* grid-template-rows: 200px 200px 200px; */
     /* grid-template: filas / columnas  */
     /* fr */
-    /* grid-template: 300px 200px 90px / repeat(4, 1fr); */
+    /* grid-template: 300px 200px 90px / repeat(4, 1fr) /repeat(4, minmax(200px,1fr)); */
     /* el minmax sirve para poner un minumo de del cual tu contenido va a dejar de usar el fr */
-    grid-template: 300px 200px 90px / repeat(4, minmax(200px,1fr));
-
-    grid-column-gap: 30px;
-    grid-row-gap: 20px;
+    grid-template: 100px 1fr 150px / 200px 1fr;
+    /* grid-column-gap: 30px;
+    grid-row-gap: 20px; */
+    /* grid-gap: filas columnas */
     grid-gap: 10px;
+    height: 100vh;
+
+    grid-template-areas:    "header header" 
+                            "left contenido" 
+                            "footer footer";
 }
 
 .item{
@@ -39,4 +44,16 @@ body{
 .item .item{
     background: yellow;
     overflow: initial
+}
+.header{
+    grid-area: header;
+}
+.left{
+    grid-area: left
+}
+.contenido{
+    grid-area: contenido;
+}
+.footer{
+    grid-area: footer;
 }
