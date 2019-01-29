@@ -7,11 +7,14 @@ body{
     display: grid;
     /* grid-template-columns: 25% 50% 25%; */
     /* grid-template-rows: 200px 200px 200px; */
-    
-    grid-template: 200px 200px 90px / 50% 30% 20%;
+    /* grid-template: filas / columnas  */
+    /* fr */
+    /* grid-template: 300px 200px 90px / repeat(4, 1fr); */
+    grid-template: 300px 200px 90px / repeat(4, minmax(200px,1fr));
+
     grid-column-gap: 30px;
     grid-row-gap: 20px;
-    grid-gap: 10px 100px;
+    grid-gap: 10px;
 }
 
 .item{
